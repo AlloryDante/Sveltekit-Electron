@@ -1,0 +1,15 @@
+{
+	"appId": "com.example.app",
+	"productName": "Sveltekit Electron",
+	"directories": {
+		"output": "dist"
+	},
+	"files": [
+		"src/electron/electron.mjs",
+		"src/electron/preload.cjs",
+		{
+			"from": "build",
+			"to": ""
+		}
+	]
+}

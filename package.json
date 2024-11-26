@@ -1,0 +1,52 @@
+{
+	"name": "sveltekit-electron",
+	"version": "0.0.1",
+	"private": true,
+	"description": "Minimal Sveltekit + Electron starter template.",
+	"main": "src/electron/electron.mjs",
+	"type": "module",
+	"author": "Allory Dante",
+	"scripts": {
+		"dev": "cross-env NODE_ENV=dev npm run dev:all",
+		"dev:all": "concurrently -n=svelte,electron -c='#ff3e00',blue \"npm run dev:svelte\" \"npm run dev:electron\"",
+		"dev:svelte": "vite dev",
+		"dev:electron": "electron src/electron/electron.mjs",
+		"build": "cross-env NODE_ENV=production npm run build:svelte && npm run build:electron",
+		"build:svelte": "vite build",
+		"build:electron": "electron-builder -w --config build.config.json"
+	},
+	"engines": {
+		"npm": ">=7",
+		"yarn": "use npm - https://github.com/FractalHQ/sveltekit-electron/issues/12#issuecomment-1068399385"
+	},
+	"browserslist": [
+		"Chrome 89"
+	],
+	"dependencies": {
+		"electron-serve": "^2.1.1",
+		"electron-window-state": "^5.0.3"
+		
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.6",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"autoprefixer": "^10.4.20",
+		"electron": "^33.2.0",
+		"electron-builder": "^25.1.8",
+		"prettier": "^3.3.2",
+		"prettier-plugin-svelte": "^3.2.6",
+		"prettier-plugin-tailwindcss": "^0.6.5",
+		"svelte": "^5.0.0",
+		"svelte-preprocess": "^6.0.3",
+		"tailwindcss": "^3.4.9",
+		"vite": "^5.0.3",
+		"concurrently": "^9.1.0",
+		"cross-env": "^7.0.3"
+	},
+	"overrides": {
+		"electron": {
+			"got": "^12.5.1"
+		}
+	}
+}

@@ -14,12 +14,12 @@ Minimal [Sveltekit](https://github.com/sveltejs/kit#readme) + [Electron](https:/
 
 Unfortunately you must use `npm` as there are issues that arise when using `pnpm` or `yarn`
 
-|         |                                             |
-| ------- | ------------------------------------------- |
-| Clone   | · `npx degit fractalhq/sveltekit-electron ` |
-| Install | · `npm install`                             |
-| Develop | · `npm run dev`                             |
-| Build   | · `npm run build`                           |
+|         |                                               |
+| ------- | --------------------------------------------- |
+| Clone   | · `npx degit AlloryDante/Sveltekit-Electron ` |
+| Install | · `npm install`                               |
+| Develop | · `npm run dev`                               |
+| Build   | · `npm run build`                             |
 
 In order to eliminate vulnerabilities caused by electron itself, please run `npm update` and `npm audit fix`. This will apply overrides.
 
